@@ -121,7 +121,6 @@
 //! cross-protocol binding), so choosing it incorrectly can weaken those properties.
 
 
-#![no_std]
 #![forbid(unsafe_code)]
 #![forbid(missing_docs)]
 // These are because the code is matching variable names exactly against FIPS 204, for example both 'K' and 'k',

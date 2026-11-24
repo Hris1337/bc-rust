@@ -977,6 +977,7 @@ impl<
         let mut sig_val_c_tilde = [0u8; LAMBDA_over_4];
         let mut sig_val_z: Vector<l>;
         let mut sig_val_h: Vector<k>;
+        let mut i: usize = 0;
         loop {
             // FIPS 204 s. 6.2 allows:
             //   "Implementations may limit the number of iterations in this loop to not exceed a finite maximum value."
@@ -1098,10 +1099,10 @@ impl<
                 kappa += l as u16;
                 continue;
             };
-
+            let i = kappa;
             break;
         }
-
+        println!("{:?}", i);
         // zeroize rho_p_p before returning it to the OS
         rho_p_p.fill(0u8);
 
